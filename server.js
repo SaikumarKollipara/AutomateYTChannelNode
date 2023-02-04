@@ -3,7 +3,7 @@ const puppeteer = require('puppeteer')
 const dotenv = require('dotenv').config()
 
 const app = express()
-const PORT = 5000
+const PORT = process.env.PORT || 5000
 function sleep(seconds, fun = () => {}) {
     return new Promise(r => setTimeout(()=>{fun(); r()}, seconds * 1000))
 }
