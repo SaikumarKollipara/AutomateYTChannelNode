@@ -33,6 +33,14 @@ app.get('/api/start', async (req, res) => {
         const page = await browser.newPage()
         await page.goto('https://kaggle.com')
         
+
+
+        await sleep(60)
+        browser.close()
+        res.status(200).send({message: 'Success'})
+        
+        
+        
         await page.click('#site-container > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) a')
         await sleep(1)
         await page.click('form > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) a')
