@@ -10,6 +10,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": "^14"
+  },
   "dependencies": {
     "dotenv": "^16.0.3",
     "chrome-aws-lambda": "^6",
